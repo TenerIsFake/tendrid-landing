@@ -24,7 +24,7 @@
 <div class="container">
   <div class="prose">
     <h1>Privacy Policy</h1>
-    <p class="prose-meta">Effective date: May 6, 2026 · Last updated: May 6, 2026</p>
+    <p class="prose-meta">Effective date: May 6, 2026 · Last updated: June 4, 2026</p>
 
     <h2>1. Who We Are</h2>
     <p>Tendrid is an independent software developer operating at <a href="https://tendrid.us">tendrid.us</a>. Questions about this policy can be directed to <a href="mailto:tenerjenkins@gmail.com">tenerjenkins@gmail.com</a>.</p>
@@ -46,7 +46,38 @@
       <li><strong>Brain-Tree-OS</strong> — self-hosted only; your vault stays on your machine.</li>
     </ul>
 
-    <h2>4. Third-Party Services</h2>
+    <h2>4. Smart-Home Device Integration</h2>
+    <p>Tendrid integrates with Google's Smart Device Management (SDM) API to provide self-hosted home automation features (camera viewing, motion detection, doorbell event handling) using Nest devices owned by the user.</p>
+
+    <h3>Scopes accessed</h3>
+    <p>When you authorize this integration via Google's OAuth consent screen, Tendrid requests access to the following Google SDM scopes:</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/sdm.service</code> — read device metadata, request live camera streams and snapshots, receive doorbell press and motion events for devices in your own Google account.</li>
+    </ul>
+
+    <h3>What we do with the data</h3>
+    <ul>
+      <li><strong>Live video streams</strong> are pulled from Google's SDM API directly to your self-hosted server on your home network. Streams are processed in real time by local software (object detection, motion analysis) and are not transmitted to Tendrid's servers or to any third party.</li>
+      <li><strong>Camera snapshots and doorbell event images</strong> are stored locally on the user's own server hardware for a user-configured retention period (typically 7–14 days), then deleted automatically.</li>
+      <li><strong>Device metadata</strong> (camera names, capabilities, online status) is cached locally to render the user interface and is refreshed on demand.</li>
+    </ul>
+
+    <h3>Where data is stored</h3>
+    <p>All Nest-derived data — video, images, metadata, event logs — is stored <strong>only on the user's own server hardware</strong>. Nothing is uploaded to Tendrid's servers or to any cloud service other than the original Google SDM endpoint that delivered it.</p>
+
+    <h3>Sharing</h3>
+    <p>We do not share Nest-derived data with third parties. The OAuth grant authorizes the user's own self-hosted Tendrid instance only.</p>
+
+    <h3>Revocation</h3>
+    <p>You can revoke this integration at any time:</p>
+    <ol>
+      <li>Visit <a href="https://myaccount.google.com/permissions" target="_blank" rel="noreferrer">https://myaccount.google.com/permissions</a></li>
+      <li>Find "Tendrid" (or the OAuth app name shown during the consent flow)</li>
+      <li>Click "Remove Access"</li>
+    </ol>
+    <p>Revocation immediately invalidates the refresh token; all camera streams stop within ~1 hour as the cached access token expires. Locally stored snapshots and recordings remain on your hardware until you delete them manually or their retention period elapses.</p>
+
+    <h2>5. Third-Party Services</h2>
     <ul>
       <li><strong>Google AdSense:</strong> Some pages display ads served by Google. Google may use cookies to serve ads based on your prior visits to this or other websites. You can opt out via <a href="https://www.google.com/settings/ads" target="_blank" rel="noreferrer">Google's ad settings</a>.</li>
       <li><strong>Stripe:</strong> Subscription payments for paid tiers are processed by Stripe, Inc. Stripe's privacy policy governs data you provide during checkout. We receive only a customer token — never your full card number.</li>
@@ -54,7 +85,7 @@
       <li><strong>Cloudflare:</strong> Our sites are served through Cloudflare's CDN. Cloudflare may log request metadata (IP address, browser, timestamp) for security and performance purposes per their privacy policy.</li>
     </ul>
 
-    <h2>5. How We Use Your Data</h2>
+    <h2>6. How We Use Your Data</h2>
     <ul>
       <li>To provide and maintain our services</li>
       <li>To send transactional emails you request (account confirmation, receipts)</li>
@@ -64,10 +95,10 @@
     </ul>
     <p>We do not sell your personal data. We do not share it with third parties except as described above.</p>
 
-    <h2>6. Data Retention</h2>
+    <h2>7. Data Retention</h2>
     <p>Account data is retained for as long as your account is active. You may request deletion at any time by emailing <a href="mailto:tenerjenkins@gmail.com">tenerjenkins@gmail.com</a>. Anonymized usage data may be retained indefinitely. Uploaded files processed for analysis are deleted within 24 hours of the session ending.</p>
 
-    <h2>7. Your Rights</h2>
+    <h2>8. Your Rights</h2>
     <p>Depending on your location, you may have the right to:</p>
     <ul>
       <li>Access the personal data we hold about you</li>
@@ -78,13 +109,13 @@
     </ul>
     <p>To exercise any of these rights, contact us at <a href="mailto:tenerjenkins@gmail.com">tenerjenkins@gmail.com</a>. We will respond within 30 days.</p>
 
-    <h2>8. Children's Privacy</h2>
+    <h2>9. Children's Privacy</h2>
     <p>Our services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
 
-    <h2>9. Changes to This Policy</h2>
+    <h2>10. Changes to This Policy</h2>
     <p>We may update this policy from time to time. The "last updated" date at the top of this page will reflect any changes. Continued use of our services after changes constitutes acceptance of the revised policy.</p>
 
-    <h2>10. Contact</h2>
+    <h2>11. Contact</h2>
     <p>For privacy-related questions or requests: <a href="mailto:tenerjenkins@gmail.com">tenerjenkins@gmail.com</a></p>
   </div>
 </div>
