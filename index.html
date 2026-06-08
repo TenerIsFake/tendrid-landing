@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-adsense-account" content="ca-pub-9760203099492988">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9760203099492988" crossorigin="anonymous"></script>
-  <meta name="description" content="Tendrid — music theory tools, 3D home design, and open-source infrastructure by an independent developer." />
-  <title>Tendrid — Music Theory, 3D Design & Open Source Tools</title>
+  <meta name="description" content="Tendrid — music theory tools, language apps, home planning, cooking, and open-source infrastructure by an independent developer." />
+  <title>Tendrid — Tools Built for Real Workflows</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,8 +27,8 @@
 
   <div class="hero">
     <p class="hero-eyebrow">Independent Developer</p>
-    <h1 class="hero-title">Music theory tools, 3D home design, and <span>open-source infrastructure</span></h1>
-    <p class="hero-sub">A collection of focused tools built for real workflows — from pitch-class set analysis and symmetry classification to interactive 3D property planning and offline knowledge management.</p>
+    <h1 class="hero-title">Focused tools for <span>real workflows</span></h1>
+    <p class="hero-sub">A collection of apps built because the right tool didn't exist — music theory analysis, dialect translation, medication tracking, recipe planning, 3D home design, and more. Each one self-hosted first, then shipped.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">Explore Projects</a>
       <a href="mailto:tenerjenkins@gmail.com" class="btn-ghost">Get in Touch</a>
@@ -44,17 +44,41 @@
 
       <div class="project-card">
         <div class="project-card-top">
+          <div class="project-icon">🗣️</div>
+          <span class="project-badge">Live</span>
+        </div>
+        <div>
+          <div class="project-name">Yissian Translator</div>
+          <p class="project-desc">
+            A browser-based dialect translator that converts English into Yissian — a constructed
+            phonological dialect built on consistent morphological rules. Supports Pig Latin and
+            Pootie Tang modes, includes a phrase library, translation history, and a full rules
+            reference. All translation happens client-side; no data leaves your browser.
+          </p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Cloudflare Pages</span>
+        </div>
+        <a href="https://yissian.tendrid.us" class="project-link" target="_blank" rel="noreferrer">
+          Open Yissian ↗
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
           <div class="project-icon">🎵</div>
           <span class="project-badge">Live</span>
         </div>
         <div>
-          <div class="project-name">Musical Symmetry</div>
+          <div class="project-name">Chrometria</div>
           <p class="project-desc">
             A pitch-class set classifier and symmetry analysis tool for composers, theorists,
             and students. Upload MIDI or MusicXML files to extract prime forms, interval vectors,
             Z-relations, and set-class symmetry groups. Includes an interactive symmetry atlas
-            covering all 224 prime forms, with voice-leading distance visualization and
-            transpositional equivalence mapping.
+            covering all 224 prime forms, with voice-leading distance visualization,
+            transpositional equivalence mapping, and a live ear-training mode.
           </p>
         </div>
         <div class="project-tags">
@@ -63,8 +87,56 @@
           <span class="tag">Web Audio API</span>
           <span class="tag">Music Theory</span>
         </div>
-        <a href="https://symmetry.tendrid.us" class="project-link" target="_blank" rel="noreferrer">
-          Open Musical Symmetry ↗
+        <a href="https://chrometria.tendrid.us" class="project-link" target="_blank" rel="noreferrer">
+          Open Chrometria ↗
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon">💊</div>
+          <span class="project-badge">Live</span>
+        </div>
+        <div>
+          <div class="project-name">RxDecay</div>
+          <p class="project-desc">
+            A medication supply tracker that estimates remaining doses based on fill dates,
+            dosage, and usage rate. Built for prescriptions with variable schedules — PRN
+            medications, tapered courses, or anything not taken on a fixed daily cadence.
+            Tracks decay curves over time so you always know when to refill before you run out.
+          </p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">React Native</span>
+          <span class="tag">Expo</span>
+          <span class="tag">Android</span>
+        </div>
+        <a href="https://rxdecay.tendrid.us" class="project-link" target="_blank" rel="noreferrer">
+          Open RxDecay ↗
+        </a>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-icon">🍳</div>
+          <span class="project-badge">Beta</span>
+        </div>
+        <div>
+          <div class="project-name">CookPlanner</div>
+          <p class="project-desc">
+            A recipe and live cook planning tool supporting Weber grills, GE ranges, Instant Pot,
+            and more. Features 52 templates, 23 appliance mastery guides, live probe temperature
+            graphing, a reverse recipe search based on what's in your pantry, cook history with
+            photos, and one-click recipe import from any URL.
+          </p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Recharts</span>
+        </div>
+        <a href="https://cookplanner.tendrid.us" class="project-link" target="_blank" rel="noreferrer">
+          Open CookPlanner ↗
         </a>
       </div>
 
@@ -159,10 +231,11 @@
           should be automated, or a question that deserves a better answer than a spreadsheet.
         </p>
         <p>
-          Musical Symmetry grew out of years of frustration with music theory software that
+          Chrometria grew out of years of frustration with music theory software that
           treated set-class analysis as an afterthought. HomePlanner 3D came from trying to
-          plan sprinkler zones on graph paper. Brain-Tree-OS came from wanting to actually
-          see my Obsidian vault instead of just searching it.
+          plan sprinkler zones on graph paper. RxDecay came from not knowing if a PRN
+          prescription would last to the next refill. CookPlanner came from wanting probe
+          temperature graphs without a $200 thermometer subscription.
         </p>
         <p>
           All projects are self-hosted first — running on my own hardware before they're
